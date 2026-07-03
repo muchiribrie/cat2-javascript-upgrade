@@ -63,4 +63,44 @@ const menuContainer = document.querySelector("#menuContainer");
 menuItems.forEach(function(item){
     let menuCard = document.createElement("article");
     menuCard.classList.add("menu-card");
-})
+
+    let menuImage = document.createElement("img");
+    menuImage.src = item.image;
+    menuImage.alt = item.name;
+
+    menuCard.appendChild(menuImage);
+
+    let menuBody = document.createElement("div");
+    menuBody.classList.add("menu-card-body");
+
+    let menuTitle = document.createElement("h3");
+    menuTitle.classList.add("menu-card-title");
+    menuTitle.textContent = item.name;
+
+    let menuPrice = document.createElement("p");
+    menuPrice.classList.add("menu-card-price");
+    menuPrice.textContent = item.price;
+
+    let menuDescription = document.createElement("p");
+    menuDescription.classList.add("menu-card-desc");
+    menuDescription.textContent = item.description;
+
+    menuBody.appendChild(menuTitle);
+    menuBody.appendChild(menuPrice);
+    menuBody.appendChild(menuDescription);
+
+    menuCard.appendChild(menuBody);
+
+    let orderButton = document.createElement("a");
+    orderButton.classList.add("btn-card");
+    orderButton.textContent = "Order Now";
+    orderButton.href = "#contact";
+
+    menuCard.appendChild(orderButton);
+
+    let imageWrapper = document.createElement("div");
+    imageWrapper.classList.add("menu-card-img-wrap");
+    menuCard.appendChild(imageWrapper);
+
+    menuContainer.appendChild(menuCard);
+});
