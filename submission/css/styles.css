@@ -623,6 +623,83 @@ details summary::-webkit-details-marker { display: none; }
   flex: 1;
 }
 
+.wishlist{
+  padding:80px 0;
+}
+
+#wishlistForm{
+  display:flex;
+  gap:15px;
+  margin:30px 0;
+}
+
+#wishlistInput{
+  flex:1;
+  padding:10px 15px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+#wishlistItems{
+  list-style:none;
+  padding:0;
+}
+
+#wishlistItems li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+  padding:12px;
+  background: #C4A896;
+  border-radius: 8px;
+}
+
+#wishlistItems button{
+  padding:8px 12px;
+  cursor:pointer;
+  border:none;
+  border-radius:50px;
+  background: #4B3124;
+  font-weight:600;
+  transition:3s;
+}
+
+#wishlistForm button:hover{
+  background:#D4B483;
+}
+
+#wishlistItems{
+  list-style:none;
+  padding:0;
+  margin-top:25px;
+
+}
+
+#wishlistItems li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+  padding:12px;
+  background: #C4A896;
+  border-radius: 8px;
+}
+
+#wishlistItems li button{
+  padding:8px 12px;
+  cursor:pointer;
+  border:none;
+  border-radius:50px;
+  background: #4B3124;
+  font-weight:600;
+  transition:3s;
+}
+
+#wishlistItems li button:hover{
+  background:#D4B483;
+}
+
 .featured {
   padding: var(--space-2xl) 0;
   background: var(--ivory);

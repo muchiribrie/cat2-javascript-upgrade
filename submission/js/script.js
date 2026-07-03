@@ -104,3 +104,29 @@ menuItems.forEach(function(item){
 
     menuContainer.appendChild(menuCard);
 });
+
+let wishlistInput = document.querySelector("#wishlistInput");
+let wishListButton = document.querySelector("#wishlistForm button");
+let wishlistItems = document.querySelector("#wishlistItems");
+
+console.log(wishlistInput);
+console.log(wishListButton);
+console.log(wishlistItems);
+
+wishListButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    let wishlistValue = wishlistInput.value;
+    if (wishlistValue != ""){
+        let li = document.createElement("li");
+        li.textContent = wishlistValue;
+
+        let button = document.createElement("button");
+        button.textContent = "Remove";
+        button.addEventListener("click", function() {
+            li.remove();
+        });
+        li.appendChild(button);
+        wishlistItems.appendChild(li);
+        wishlistInput.value = "";
+    }
+});
