@@ -166,3 +166,10 @@ wishlistInput.addEventListener("input", function() {
 
 wishlistInput.value = localStorage.getItem("favouriteCake") || "";
 
+let heroImage = document.querySelector("#heroImage");
+let heroContent = document.querySelector("#heroContent");
+heroContent.classList.add("hide-text");
+heroImage.addEventListener("load", function() {
+    heroContent.classList.toggle("hide-text");
+    heroContent.classList.toggle("show-text");
+});
