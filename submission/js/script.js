@@ -160,3 +160,9 @@ orderForm.addEventListener("submit", function(event) {
     }
 });
 
+wishlistInput.addEventListener("input", function() {
+    localStorage.setItem("favouriteCake", wishlistInput.value);
+});
+
+wishlistInput.value = localStorage.getItem("favouriteCake") || "";
+
