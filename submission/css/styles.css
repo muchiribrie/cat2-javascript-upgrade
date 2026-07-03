@@ -1179,6 +1179,10 @@ details summary::-webkit-details-marker { display: none; }
   font-weight: 400;
   transition: color var(--transition-base);
 }
+#formFeedback{
+    margin-top:15px;
+    font-weight:600;
+}
 .contact-card a:hover { color: var(--champagne-dk); }
 
 .hours-list {

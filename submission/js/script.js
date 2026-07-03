@@ -130,3 +130,33 @@ wishListButton.addEventListener("click", function(event) {
         wishlistInput.value = "";
     }
 });
+
+let orderForm = document.querySelector("#orderForm");
+let orderFeedback = document.querySelector("#orderFeedback");
+
+orderForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let customerName = document.querySelector("#customer-name");
+    let customerPhone = document.querySelector("#customer-phone");
+    let customerEmail = document.querySelector("#customer-email");
+    let product = document.querySelector("#product-select");
+    let quantity = document.querySelector("#quantity");
+    let pickupDate = document.querySelector("#pickup-date");
+
+    if(customerName.value === "" || customerPhone.value === "" || customerEmail.value === "" || product.value === "" || quantity.value === "" || pickupDate.value === ""){
+        formFeedback.textContent = "Please fill in all fields.";
+        formFeedback.style.color = "red";
+    }else{
+        orderFeedback.textContent = "Thank you for your message! We will get back to you soon.";
+        orderFeedback.style.color = "green";
+        customerName.value="";
+        customerPhone.value="";
+        customerEmail.value="";
+        product.selectedIndex = 0;
+        quantity.value="";
+        pickupDate.value="";
+
+        orderForm.reset();
+    }
+});
+
